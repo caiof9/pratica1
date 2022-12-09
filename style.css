@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #DFEBEB;
+    --text-color: #10131C;
+    --button-color: #130F28;
+    --border-color: #BBC1C1;
+}
+
+a{
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+body *{
+    font-family: 'Poppins', sans-serif;
+}
+
+form {
+    background-color: white;
+    width: 700px;
+    margin: auto;
+    padding: 90px;
+    border-radius: 32px;
+    box-shadow: 0 0 48px rgb(0 0 0 / .1);
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset legend {
+    font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/*Radio*/
+
+.radio-wrapper {
+    border-radius: 16px;
+    background-color:#F4FAFA;
+    border-color: 1px solid var(--border-color) ;
+    padding: 24px;
+}
+
+.radio-wrapper > div {
+    display: flex;
+    gap: 8px;
+}
+
+.radio-wrapper input[type="radio"] {
+    appearance: none;
+
+    border: 1px solid var(--border-color);
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+
+    background-color: white;
+}
+
+.radio-wrapper input[type="radio"]:checked {
+    background-image: radial-gradient(white 35%, black 40%);
+}
+
+.radio-wrapper:not(:has(:checked)){
+    opacity: .6;
+}
+
+.radio-wrapper label {
+    font-size: 20px;
+}
+
+.radio-wrapper p{
+    padding-left: 38px;
+    margin-top: 10px;
+}
+legend + .radio-wrapper{
+    margin-top: 60px;
+}
+
+.radio-wrapper + .radio-wrapper, .checkbox-wrapper + .checkbox-wrapper{
+    margin-top: 24px;
+}
+
+/*checkbox*/
+
+.checkbox-wrapper {
+    display: flex;
+    gap: 8px;
+
+    padding-inline: 26px;
+}
+
+
+
+.checkbox-wrapper input[type="checkbox"]{
+    appearance: none;
+
+    flex-shrink: 0;
+
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+
+    position: relative;
+}
+
+.checkbox-wrapper input[type="checkbox"]:focus {
+    outline: 4px solid black;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked::before {
+    content: "✓";
+    font-size: 24px;
+    position: absolute;
+    top: -6px;
+    left: 4px;
+}
+
+.checkbox-wrapper label{
+    margin-top: 4px;
+}
+
+.radio-wrapper + .checkbox-wrapper{
+    margin-top: 48px;
+}
+
+
+/*Button*/
+button {
+    margin-top: 58px;
+    
+    width:100% ;
+
+    background-color: var(--button-color);
+    padding-block: 20px;
+    
+    color: white;
+
+    border: none;
+}
+
+small {
+    text-align: center;
+    display: block;
+    margin-top: 28px;
+}
